@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Of Shapes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="IMAGES/shape.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <h1>AREA OF SHAPES</h1>
+<section>
+        <div class="container">
+        <h2> Circle <img src="IMAGES/circle.png" alt="" width="70px"></h2>
+        
+        <div class="input-group">
+            <label for="inputRadius">Radius</label>
+            <input type="number" id="inputRadius" placeholder="Enter radius">
+        </div>
+
+        <div class="input-group">
+            <label for="inputPi">Pi Value</label>
+            <input type="number" id="inputPi" placeholder="Enter pi (default: 3.14)">
+        </div>
+
+        <button onclick="calculateArea()">Calculate Area</button>
+        
+        <div class="result">
+            <p id="outputArea"></p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div>
+        <h2> Square <img src="IMAGES/square.png" alt="" width="70px"></h2>
+
+    <h3>Length</h3>
+    <input type="number" id="inputSquare">
+
+<button onclick="calculateSquare()">Calculate Area</button>
+
+<div>
+    <p id="outPut"></p>
+</div>
+</div>
+</section>
+
+
+<section>
+    <div>
+        <h2> Triangle <img src="IMAGES/triangle.png" alt="" width="70px"></h2>
+
+        <h3>Base</h3>
+        <input type="number" id="inputBase">
+
+        <h3>Height</h3>
+        <input type="number" id="heightTriangle">
+
+        <button onclick="calculateTriangle()">Calculate Area</button>
+
+        <div>
+            <p id="triangleOutput"></p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h2> Quadrilateral <img src="IMAGES/quadrilateral.jpg" alt="" width="70px"></h2>
+
+        <h3>Diagonal</h3>
+        <input type="number" id="diagonalInput">
+
+        <h3>Height</h3>
+        <input type="number" id="heightInput">
+
+        <button onclick="calculateQuadrilateral()">Calculate Area</button>
+
+        <div>
+            <p id="quadrilateralOutput"></p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h2> Rhombus <img src="IMAGES/rhombus.png" alt="" width="70px"></h2>
+
+        <h3>Diagonal 1</h3>
+        <input type="number" id="inputDiagonal1">
+
+        <h3>Diagonal 2</h3>
+        <input type="number" id="inputDiagonal2">
+
+        <button onclick="calculateRhombus() ">Calculate Area</button>
+
+        <div>
+            <p id="rhombusOutput"></p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h2> Trapezium <img src="IMAGES/trapezium.png" alt="" width="70px"></h2>
+
+        <h3>A</h3>
+        <input type="number" id="parallelSide1">
+
+        <h3>B</h3>
+        <input type="number" id="parallelSide2">
+
+        <h3>Height</h3>
+        <input type="number" id="trapeziumHeight">
+
+        <button onclick="calculateTrapezium()">Calculate Area</button>
+
+        <p id="trapeziumOutput"></p>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h2> Parallelogram <img src="IMAGES/parallelogram.png" alt="" width="90px"></h2>
+
+        <h3>Base</h3>
+        <input type="number" id="paraBase">
+
+        <h3>Height</h3>
+        <input type="number" id="paraHeight">
+
+        <button onclick="calculateParallelogram()">Calculate Area</button>
+
+        <div>
+            <p id="parallelogramOutput"></p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h2>The Body Mass Index (BMI)</h2>
+
+        <h3>Weight (Kg)</h3>
+        <input type="number" id="weightBmi">
+
+        <h3>Height (m)</h3>
+        <input type="number" id="heightBmi">
+
+        <button onclick="calculateBody()">Calculate BMI</button>
+
+        <div>
+            <p id="bmiOutput"></p>
+        </div>
+    </div>
+</section>
+    
+</body>
+<script src="script.js"></script>
+</html>
