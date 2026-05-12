@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,157 +8,221 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="IMAGES/shape.jpg" type="image/x-icon">
 </head>
+
 <body>
 
     <h1>AREA OF SHAPES</h1>
-<section>
+    <section>
         <div class="container">
-        <h2> Circle <img src="IMAGES/circle.png" alt="" width="70px"></h2>
-        
-        <div class="input-group">
-            <label for="inputRadius">Radius</label>
-            <input type="number" id="inputRadius" placeholder="Enter radius">
+            <h2> Circle <img src="IMAGES/circle.png" alt="" width="70px"></h2>
+
+            <div class="input-group">
+                <label for="inputRadius">Radius</label>
+                <input type="number" id="inputRadius" placeholder="Enter radius">
+            </div>
+
+            <div class="input-group">
+                <label for="inputPi">Pi Value</label>
+                <input type="number" id="inputPi" placeholder="Enter pi (default: 3.14)">
+            </div>
+
+            <button onclick="calculateArea()">Calculate Area</button>
+
+            <div class="result">
+                <p id="outputArea"></p>
+            </div>
         </div>
-
-        <div class="input-group">
-            <label for="inputPi">Pi Value</label>
-            <input type="number" id="inputPi" placeholder="Enter pi (default: 3.14)">
-        </div>
-
-        <button onclick="calculateArea()">Calculate Area</button>
-        
-        <div class="result">
-            <p id="outputArea"></p>
-        </div>
-    </div>
-</section>
+    </section>
 
 
-<section>
-    <div>
-        <h2> Square <img src="IMAGES/square.png" alt="" width="70px"></h2>
-
-    <h3>Length</h3>
-    <input type="number" id="inputSquare">
-
-<button onclick="calculateSquare()">Calculate Area</button>
-
-<div>
-    <p id="outPut"></p>
-</div>
-</div>
-</section>
-
-
-<section>
-    <div>
-        <h2> Triangle <img src="IMAGES/triangle.png" alt="" width="70px"></h2>
-
-        <h3>Base</h3>
-        <input type="number" id="inputBase">
-
-        <h3>Height</h3>
-        <input type="number" id="heightTriangle">
-
-        <button onclick="calculateTriangle()">Calculate Area</button>
-
+    <section>
         <div>
-            <p id="triangleOutput"></p>
+            <h2> Square <img src="IMAGES/square.png" alt="" width="70px"></h2>
+
+            <h3>Length</h3>
+            <input type="number" id="inputSquare">
+
+            <button onclick="calculateSquare()">Calculate Area</button>
+
+            <div>
+                <p id="outPut"></p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section>
-    <div>
-        <h2> Quadrilateral <img src="IMAGES/quadrilateral.jpg" alt="" width="70px"></h2>
 
-        <h3>Diagonal</h3>
-        <input type="number" id="diagonalInput">
-
-        <h3>Height</h3>
-        <input type="number" id="heightInput">
-
-        <button onclick="calculateQuadrilateral()">Calculate Area</button>
-
+    <section>
         <div>
-            <p id="quadrilateralOutput"></p>
+            <h2> Triangle <img src="IMAGES/triangle.png" alt="" width="70px"></h2>
+
+            <h3>Base</h3>
+            <input type="number" id="inputBase">
+
+            <h3>Height</h3>
+            <input type="number" id="heightTriangle">
+
+            <button onclick="calculateTriangle()">Calculate Area</button>
+
+            <div>
+                <p id="triangleOutput"></p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section>
-    <div>
-        <h2> Rhombus <img src="IMAGES/rhombus.png" alt="" width="70px"></h2>
-
-        <h3>Diagonal 1</h3>
-        <input type="number" id="inputDiagonal1">
-
-        <h3>Diagonal 2</h3>
-        <input type="number" id="inputDiagonal2">
-
-        <button onclick="calculateRhombus() ">Calculate Area</button>
-
+    <section>
         <div>
-            <p id="rhombusOutput"></p>
+            <h2> Quadrilateral <img src="IMAGES/quadrilateral.jpg" alt="" width="70px"></h2>
+
+            <h3>Diagonal</h3>
+            <input type="number" id="diagonalInput">
+
+            <h3>Height</h3>
+            <input type="number" id="heightInput">
+
+            <button onclick="calculateQuadrilateral()">Calculate Area</button>
+
+            <div>
+                <p id="quadrilateralOutput"></p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section>
-    <div>
-        <h2> Trapezium <img src="IMAGES/trapezium.png" alt="" width="70px"></h2>
-
-        <h3>A</h3>
-        <input type="number" id="parallelSide1">
-
-        <h3>B</h3>
-        <input type="number" id="parallelSide2">
-
-        <h3>Height</h3>
-        <input type="number" id="trapeziumHeight">
-
-        <button onclick="calculateTrapezium()">Calculate Area</button>
-
-        <p id="trapeziumOutput"></p>
-    </div>
-</section>
-
-<section>
-    <div>
-        <h2> Parallelogram <img src="IMAGES/parallelogram.png" alt="" width="90px"></h2>
-
-        <h3>Base</h3>
-        <input type="number" id="paraBase">
-
-        <h3>Height</h3>
-        <input type="number" id="paraHeight">
-
-        <button onclick="calculateParallelogram()">Calculate Area</button>
-
+    <section>
         <div>
-            <p id="parallelogramOutput"></p>
+            <h2> Rhombus <img src="IMAGES/rhombus.png" alt="" width="70px"></h2>
+
+            <h3>Diagonal 1</h3>
+            <input type="number" id="inputDiagonal1">
+
+            <h3>Diagonal 2</h3>
+            <input type="number" id="inputDiagonal2">
+
+            <button onclick="calculateRhombus() ">Calculate Area</button>
+
+            <div>
+                <p id="rhombusOutput"></p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section>
-    <div>
-        <h2>The Body Mass Index (BMI)</h2>
-
-        <h3>Weight (Kg)</h3>
-        <input type="number" id="weightBmi">
-
-        <h3>Height (m)</h3>
-        <input type="number" id="heightBmi">
-
-        <button onclick="calculateBody()">Calculate BMI</button>
-
+    <section>
         <div>
-            <p id="bmiOutput"></p>
+            <h2> Trapezium <img src="IMAGES/trapezium.png" alt="" width="70px"></h2>
+
+            <h3>A</h3>
+            <input type="number" id="parallelSide1">
+
+            <h3>B</h3>
+            <input type="number" id="parallelSide2">
+
+            <h3>Height</h3>
+            <input type="number" id="trapeziumHeight">
+
+            <button onclick="calculateTrapezium()">Calculate Area</button>
+
+            <p id="trapeziumOutput"></p>
         </div>
+    </section>
+
+    <section>
+        <div>
+            <h2> Parallelogram <img src="IMAGES/parallelogram.png" alt="" width="90px"></h2>
+
+            <h3>Base</h3>
+            <input type="number" id="paraBase">
+
+            <h3>Height</h3>
+            <input type="number" id="paraHeight">
+
+            <button onclick="calculateParallelogram()">Calculate Area</button>
+
+            <div>
+                <p id="parallelogramOutput"></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>The Body Mass Index (BMI)</h2>
+
+            <h3>Weight (Kg)</h3>
+            <input type="number" id="weightBmi">
+
+            <h3>Height (m)</h3>
+            <input type="number" id="heightBmi">
+
+            <button onclick="calculateBody()">Calculate BMI</button>
+
+            <div>
+                <p id="bmiOutput"></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="questions">
+        <h6>Find out the difference between a float and a double?</h6>
+        <p> 1. <span style="text-decoration: underline;"> Memory Usage:</span>
+            A float is more memory-efficient. This makes it a popular choice in graphics programming (like Three.js or
+            WebGL), where thousands or millions of coordinates need to be processed quickly and extreme precision isn't
+            always necessary.</p>
+
+        <p>2. <span style="text-decoration: underline;">Precision:</span>
+            A double is twice as precise as a float. Because it uses more bits to store the mantissa (the fractional
+            part), it can represent much smaller differences between numbers. In modern web development and
+            general-purpose software, double is usually the default choice to avoid rounding errors.</p>
+
+        <p>3. <span style="text-decoration: underline;">Performance</span>
+            On modern 64-bit CPUs: The performance difference between the two is negligible. In some cases, double may
+            even be faster because it is the native size for the processor's registers.
+
+            On mobile or embedded devices: float might still provide a performance boost due to lower memory bandwidth
+            requirements.</p>
+
+        <h5> <strong>When to use which?</strong>
+            Use float when memory is a major constraint or when working with high-performance graphics and animations
+            where a tiny rounding error won't be visible to the eye.
+
+            Use double for most general applications, complex calculations, or when you need to ensure higher accuracy
+            over repeated mathematical operations.
+
+            Note: Neither should be used for financial calculations (like currency). For those, you should use a Decimal
+            type to avoid the inherent binary rounding issues of floating-point arithmetic.</h5>
+
     </div>
-</section>
-    
+
+    <div class="question1">
+        <h6>Different applications bought and the amount they were bought for?</h6>
+        <p><span>Applications</span> <span>Buyer</span> <span>Purchase Price</span> <span>Year</span></p>
+
+        <p><span>Twitter (X)</span> <span>Elon Musk</span> <span>$44 Billion</span> <span>2022</span></p>
+
+        <p><span>Slack</span> <span>Salesforce</span> <span>$27.7 Billion</span> <span>2020</span></p>
+
+        <p><span>LinkedIn</span> <span>Microsoft</span> <span>$26.2 Billion</span> <span>2016</span></p>
+
+        <p><span>WhatsApp</span> <span>Meta <br> (Facebook)</span> <span>$19.3 Billion</span> <span>2014</span></p>
+
+        <p><span>Flipkart</span> <span>Walmart</span> <span>$16 Billion</span> <span>2018</span></p>
+
+        <p><span>Skype</span> <span>Microsoft</span> <span>$8.5 Billion</span> <span>2011</span></p>
+
+
+        <p><span>GitHub</span> <span>Microsoft</span> <span>$7.5 Billion</span> <span>2018</span></p>
+
+        <p><span>Minecraft <br> (Mojang)</span> <span>Microsoft</span> <span>$2.5 Billion</span> <span>2014</span></p>
+
+
+        <p><span>YouTube</span> <span>Google</span> <span>$1.65 Billion</span> <span>2006</span></p>
+
+
+        <p><span>Waze</span> <span>Google</span> <span>$1.1 Billion</span> <span>2013</span></p>
+
+
+        <p><span>Instagram</span> <span>Meta <br> (Facebook)</span> <span>$1.0 Billion</span> <span>2012</span></p>
+    </div>
+
 </body>
 <script src="script.js"></script>
+
 </html>
